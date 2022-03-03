@@ -12,7 +12,7 @@ export const TemplateProvider = (props: any) => {
 
 export function inject(...storeNames: string[]): any {
 	return function (TclassComponent: any): any {
-		return function (props: any) {
+		return function () {
 
 			const selectStores: any = React.useContext(MobxProviderContext)
 			const mprops: { [key: string]: any } = {}
